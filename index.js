@@ -5,10 +5,11 @@ const cors = require('cors');
 const apiData = require('./apiJson.json');
 
 const port = process.env.PORT || 8000;
+const host = "0.0.0.0";
 app.use(cors());
 
 app.get('/services', (req, res)=>{
-    res.json(apiData);
+    res.send(apiData);
     })
 
 app.get('/', (req, res)=>{
